@@ -1,0 +1,15 @@
+### Ressources utiles###
+Orange Welcom : #ed9500 
+Orange 2 Welcom : #ee8a43
+Bleu Welcom : #355eaa
+Jaune Welcom : #fcb712
+Vert Welcom : #79d223
+Jaune Abeille Welcom : #efc700
+
+
+Color palette suggérée : 
+#fffd98,
+#bde4a7,
+#b3d2b2,
+#9fbbcc,
+#7a9cc6
