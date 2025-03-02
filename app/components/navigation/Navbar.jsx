@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import logo from './Logo_Welcom.png'; // Assurez-vous de mettre le bon chemin vers votre logo
+import logo from './Logo_Welcom.png'; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +51,7 @@ return (
 const NavLink = ({ href, children, onClick }) => (
     <Link
         href={href}
-        className="text-black hover:text-[#fffd98] transition font-medium"
+        className="text-black hover:text-[#fffd98] transition font-medium text-xl"
         onClick={onClick}
     >
         {children}

@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
+import Button from "./components/navigation/Button";
+import SocialLinks from "./components/navigation/SocialLinks";
 
 export default function Home() {
   return (
@@ -15,10 +18,10 @@ export default function Home() {
 
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <div className="grid grid-cols-2 gap-8 w-full p-4"> 
-          <div className="p-4">
+          <div className="p-4 text-black">
             <section>
-              <h1 className="text-2xl font-bold mb-4">Welcom'</h1>
-              <p className="mb-4">
+              <h1 className="text-2xl font-bold mb-4 text-black">Welcom'</h1>
+              <p className="mb-4 text-black">
                 Moving to a new country can be exciting… but also a little overwhelming, right?  
                 That’s where <strong>Welcom'</strong> comes in! We’re the student association at <strong>Télécom SudParis</strong> dedicated to helping international students feel  
                 right at home from day one.
@@ -26,7 +29,6 @@ export default function Home() {
 
               <h3 className="text-xl font-semibold mb-2">What do we do?</h3>
               <ul className="list-disc list-inside mb-4">
-                <li>Pick you up at the airport or train station</li>
                 <li>Help you settle in and understand French life</li>
                 <li>Organize amazing events so you can meet new friends</li>
                 <li>Assist with paperwork and daily life stuff</li>
@@ -44,6 +46,18 @@ export default function Home() {
               </p>
 
               <p ><strong>Follow us & reach out anytime!</strong></p>
+              <div className="p-4">
+
+
+              
+              <SocialLinks
+                links={[
+                  { name: "Facebook", url: "https://facebook.com" },
+                  
+                ]}
+              />
+              </div>
+
             </section>
           </div>
           <div className="flex justify-end">
@@ -64,7 +78,7 @@ export default function Home() {
               height={1000}
             className="object-contain"
           />
-          <div className="grid grid-rows-2">
+          <div className="grid grid-rows-2 text-black">
           <section>
             <h1 className="text-2xl font-bold mb-4">Our Events</h1>
               <p className="mb-4">
@@ -97,6 +111,12 @@ export default function Home() {
               </p>
 
               <p><strong>Stay tuned and join the fun!</strong></p>
+              
+              <div className="p-4">
+                <Button href="/events">See Events</Button>
+              </div>
+              
+              
             </section>
 
           </div>
