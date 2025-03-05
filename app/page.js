@@ -5,7 +5,7 @@ import SocialLinks from "./components/navigation/SocialLinks";
 
 export default function Home() {
   return (
-    <div className=" grid grid-rows-[200px_1fr] min-h-screen sm:pt-0 sm:p-10 font-[family-name:var(--font-geist-sans)]">
+    <div className=" grid grid-rows-[200px_1fr] h-full sm:pt-0 sm:p-10 font-[family-name:var(--font-geist-sans)]">
       <div className="flex justify-center p-8 row-start-1">
         <Image 
           src="/welcom.png" 
@@ -47,9 +47,6 @@ export default function Home() {
 
               <p ><strong>Follow us & reach out anytime!</strong></p>
               <div className="p-4">
-
-
-              
               <SocialLinks
                 links={[
                   { name: "Facebook", url: "https://facebook.com" },
@@ -78,7 +75,7 @@ export default function Home() {
               height={1000}
             className="object-contain"
           />
-          <div className="grid grid-rows-2 text-black">
+          <div className="grid grid-rows-1 text-black">
           <section>
             <h1 className="text-2xl font-bold mb-4">Our Events</h1>
               <p className="mb-4">
@@ -112,15 +109,33 @@ export default function Home() {
 
               <p><strong>Stay tuned and join the fun!</strong></p>
               
-              <div className="p-4">
-                <Button href="/events">See Events</Button>
+              <div className="p-4 overflow:visible">
+                <Button 
+                href="/events"
+                className="transition-transform duration-300 ease-in-out hover:-translate-y-1">
+                  See Events</Button>
               </div>
-              
-              
             </section>
-
           </div>
+
         </div>
+        <div className="grid grid-rows-1 grid-cols-2 gap-8 text-black w-full  ">
+            <div className="flex justify-center items-center">
+              <Image 
+                src="/Logo_Welcom.png" 
+                width={220} 
+                height={220} 
+                alt="Welcom Logo" 
+                className="h-40 w-40 rounded-full border-4 border-yellow-300"
+              />
+          </div>
+          <div className="grid text-black">
+            <h1 className="text-2xl font-bold mb-4">
+              Le mot de la présidente
+            </h1>
+              <p>Gros caca partout</p>
+          </div>
+        </div>  
       </main>  
     </div>
   );
