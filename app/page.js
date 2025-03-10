@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "./components/navigation/Button";
 import SocialLinks from "./components/navigation/SocialLinks";
+import ImageCarousel from "./components/ImageCarousel"; 
 
 export default function Home() {
   return (
-    <div className=" grid grid-rows-[200px_1fr] h-full sm:pt-0 sm:p-10 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[200px_1fr] min-h-screen sm:pt-0 sm:p-10 font-[family-name:var(--font-geist-sans)]">
       <div className="flex justify-center p-8 row-start-1">
         <Image 
           src="/welcom.png" 
@@ -16,8 +17,8 @@ export default function Home() {
         />
       </div>
 
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <div className="grid grid-cols-2 gap-8 w-full p-4"> 
+      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full p-4"> 
           <div className="p-4 text-black">
             <section>
               <h1 className="text-2xl font-bold mb-4 text-black">Welcom'</h1>
@@ -47,37 +48,29 @@ export default function Home() {
 
               <p ><strong>Follow us & reach out anytime!</strong></p>
               <div className="p-4">
-              <SocialLinks
-                links={[
-                  { name: "Facebook", url: "https://facebook.com" },
-                  
-                ]}
-              />
+                <SocialLinks
+                  links={[
+                    { name: "Instagram", url: "https://www.instagram.com/welcom_int?igsh=bXI4M2M4cW5oeW54&utm_source=qr" },
+                  ]}
+                />
               </div>
-
             </section>
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-center md:justify-end">
             <Image 
               src="/orga_welcom.jpeg"
               alt="Welcom Logo"
               width={1000}
               height={1000}
-              className="object-contain"
+              className="object-contain max-w-full"
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-8 sm:flex-row w-full p-4">
-          <Image 
-            src="/orga_welcom.jpeg"
-            alt="Welcom Logo"
-            width={1000}
-              height={1000}
-            className="object-contain"
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full p-4">
+          <ImageCarousel/>
           <div className="grid grid-rows-1 text-black">
-          <section>
-            <h1 className="text-2xl font-bold mb-4">Our Events</h1>
+            <section>
+              <h1 className="text-2xl font-bold mb-4">Our Events</h1>
               <p className="mb-4">
                 At <strong>Welcom'</strong>, we believe that the best way to feel at home is to connect with people and create unforgettable memories.  
                 That’s why we organize a variety of events throughout the year to help international students meet new friends and experience student life at Télécom SudParis!
@@ -109,33 +102,35 @@ export default function Home() {
 
               <p><strong>Stay tuned and join the fun!</strong></p>
               
-              <div className="p-4 overflow:visible">
-                <Button 
+              <div className="flex p-6 overflow-visible justify-center">
+              <Button 
                 href="/events"
-                className="transition-transform duration-300 ease-in-out hover:-translate-y-1">
-                  See Events</Button>
+                className="transition-transform duration-300 "
+              >
+                See Events
+              </Button>
+
               </div>
             </section>
           </div>
-
         </div>
-        <div className="grid grid-rows-1 grid-cols-2 gap-8 text-black w-full  ">
-            <div className="flex justify-center items-center">
-              <Image 
-                src="/Logo_Welcom.png" 
-                width={220} 
-                height={220} 
-                alt="Welcom Logo" 
-                className="h-40 w-40 rounded-full border-4 border-yellow-300"
-              />
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-8 text-black w-full items-center p-4">
+          <div className="flex flex-col md:flex-row justify-center items-center md:items-start">
+            <Image 
+              src="/Mélissa.jpeg" 
+              width={220} 
+              height={220} 
+              alt="Présidente" 
+              className="h-40 w-40 rounded-full border-4 border-yellow-300"
+            />
+            <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left md:ml-4">
+              <h1 className="text-2xl font-bold mb-4">The word of the president</h1>
+              <p>As the president of Welcom', I have the chance to closely follow all of our projects, and I'm thankful for that. Our main events, the Global Village and Valentine's Day, really brought together French and incoming students ! We felt like we succeeded in our mission.
+              Of course, the great thing about being part of Welcom' is that you get to meet people from different countries, which is truly enriching !
+              Being part of Welcom' is one of the best experiences of my student life, and I can only recommend that you join the next mandate !</p>
+            </div>
           </div>
-          <div className="grid text-black">
-            <h1 className="text-2xl font-bold mb-4">
-              Le mot de la présidente
-            </h1>
-              <p>Gros caca partout</p>
-          </div>
-        </div>  
+        </div>
       </main>  
     </div>
   );

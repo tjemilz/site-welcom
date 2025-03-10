@@ -1,0 +1,33 @@
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* Ajustez cette valeur selon vos besoins */
+    width: 70%;
+    background: linear-gradient(90deg, #7aa3c9, #146ce0);
+    border-radius: 16px;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap; /* Permet de passer en colonne sur les petits écrans */
+}
+
+.countdown-element {
+    margin: 0 10px;
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 640px) {
+    .countdown-container {
+        flex-direction: column; /* Passe les éléments en colonne sur les petits écrans */
+        height: auto; /* Ajuste la hauteur automatiquement */
+        width: 90%; /* Ajuste la largeur pour les petits écrans */
+    }
+
+    .countdown-element {
+        margin: 5px 0; /* Ajuste la marge pour les éléments en colonne */
+        font-size: 1.5rem; /* Ajuste la taille de la police pour les petits écrans */
+    }
+}

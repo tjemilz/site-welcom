@@ -11,6 +11,7 @@ const WelcomePage = () => {
 
             <div className="flex flex-wrap">
                 <div className="w-full md:w-1/2 p-4">
+                <h3 className="text-2xl font-semibold mb-3 text-green-600">Just Arriving ?</h3>
                     <p className="mb-4 text-lg text-gray-700">
                         Just arrived in Évry? No worries, we’ve got you covered!  
                         Located about 30 km south of Paris, Évry is a dynamic student-friendly city  
@@ -18,13 +19,13 @@ const WelcomePage = () => {
                     </p>
                 </div>
                 <div className="w-full md:w-1/2 p-4">
-                <Image src="/Evry.jpg" alt="Évry City" width={500} height={300} className="rounded-lg shadow-lg object-cover w-full max-h-[300px]" />
+                <Image src="/Evry.jpg" alt="Évry City" width={500} height={300} className="rounded-lg shadow-lg object-cover w-full max-h-[400px]" />
                 </div>
             </div>
 
             <div className="flex flex-wrap">
                 <div className="w-full md:w-1/2 p-4 order-2 md:order-1">
-                <Image src="/Gare.jpeg" alt="Gare du bras de Fer" width={500} height={300} className="rounded-lg shadow-lg object-cover w-full max-h-[300px]" />
+                <Image src="/Gare.jpeg" alt="Gare du bras de Fer" width={500} height={300} className="rounded-lg shadow-lg object-cover w-full max-h-[400px]" />
                 </div>
                 <div className="w-full md:w-1/2 p-4 order-1 md:order-2">
                     <h3 className="text-2xl font-semibold mb-3 text-green-600">Getting Around</h3>
@@ -45,13 +46,13 @@ const WelcomePage = () => {
                     </ul>
                 </div>
                 <div className="w-full md:w-1/2 p-4">
-                <Image src="/Evry2.jpg" alt="Shopping" width={500} height={300} className="rounded-lg shadow-lg object-cover w-full max-h-[300px]" />
+                <Image src="/Evry2.jpg" alt="Shopping" width={500} height={300} className="rounded-lg shadow-lg object-cover w-full max-h-[400px]" />
                 </div>
             </div>
 
             <div className="flex flex-wrap">
                 <div className="w-full md:w-1/2 p-4 order-2 md:order-1">
-                    <img src="/images/services.jpg" alt="Services" className="rounded-lg shadow-lg" />
+                    <img src="SG.jpg" alt="Services" className="rounded-lg shadow-lg object-cover w-full max-h-[400px]" />
                 </div>
                 <div className="w-full md:w-1/2 p-4 order-1 md:order-2">
                     <h3 className="text-2xl font-semibold mb-3 text-green-600">Essential Services</h3>

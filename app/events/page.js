@@ -1,45 +1,52 @@
 import React from 'react';
+import Carousel from '../components/Carroussel';
+
+const slides = [
+  { src: '/Carroussel/Image1.jpg', alt: 'Image 1' },
+  { src: '/Carroussel/Image2.jpg', alt: 'Image 2' },
+  { src: '/Carroussel/Image3.jpg', alt: 'Image 3' },
+  { src: '/Carroussel/Image4.jpg', alt: 'Image 4' },
+  { src: '/Carroussel/Image5.jpg', alt: 'Image 5' },
+  { src: '/Carroussel/Image6.jpg', alt: 'Image 6' },
+  { src: '/Carroussel/Image7.jpg', alt: 'Image 7' },
+  { src: '/Carroussel/Image8.jpg', alt: 'Image 8' },
+  { src: '/Carroussel/Image9.jpg', alt: 'Image 9' },
+  { src: '/Carroussel/Image10.jpg', alt: 'Image 10' },
+  { src: '/Carroussel/Image11.jpg', alt: 'Image 11' },
+  { src: '/Carroussel/Image12.jpg', alt: 'Image 12' },
+  { src: '/Carroussel/Image13.jpg', alt: 'Image 13' },
+  { src: '/Carroussel/Image14.jpg', alt: 'Image 14' },
+  { src: '/Carroussel/Image15.jpg', alt: 'Image 15' },
+];
 
 const EventsPage = () => {
     return (
-        <section className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-lg m-6">
-  <h1 className="text-3xl font-bold text-center mb-6 text-black">Welcom' Events</h1>
+      <div className='flex justify-center pt-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8  w-full m-10'>
+          <div className='p-4 '>
+            <p className='text-black'>
+            Throughout the year, immerse yourself in a 
+            vibrant lineup of global celebrations that bring people together in joy and festivity. 
+            From the lively parades and green-themed festivities of Saint Patrick’s Day to the romantic 
+            charm of Valentine’s Day, there’s always something to celebrate. 
+            Experience the dazzling colors and energetic spirit of Carnaval, 
+            indulge in the rich traditions and hearty brews of Oktoberfest, 
+            and embrace countless other cultural events that make each season special. 
+            No matter the occasion, our events offer unforgettable moments filled with music, 
+            laughter, and a shared sense of joy.
 
-  <p className="mb-4 text-lg text-gray-700">
-    At <strong>Welcom'</strong>, we believe that meeting new people and enjoying unforgettable moments  
-    is the best way to settle in! That’s why we organize amazing events throughout the year  
-    to help international students connect, have fun, and experience student life at TSP.
-  </p>
-
-  <h3 className="text-2xl font-semibold mb-3 text-green-600">Our Main Events</h3>
-
-  <ul className="list-disc list-inside space-y-2 text-gray-800">
-    <li><strong>🔥 Welcome BBQ:</strong> A huge barbecue at the start of the year to meet new people in a chill atmosphere.</li>
-    <li><strong>✈️ International Trip:</strong> Every year, we take you on an epic journey! Last year? <strong>Amsterdam!</strong> Where to next?</li>
-    <li><strong>🎉 Absinthe Nights:</strong> We team up with Absinthe (the school's bar) for themed parties and fun social nights.</li>
-    <li><strong>🍽️ International Dinners:</strong> Discover dishes from all over the world and share a taste of your home country!</li>
-    <li><strong>🎭 Cultural & Game Nights:</strong> Movie nights, quiz games, karaoke… endless ways to have fun!</li>
-  </ul>
-
-  <h3 className="text-2xl font-semibold mb-3 text-green-600">Why Join Our Events?</h3>
-
-  <ul className="list-disc list-inside space-y-2 text-gray-800">
-    <li>Meet students from <strong>all over the world</strong>.</li>
-    <li>Discover new cultures and <strong>share yours</strong>.</li>
-    <li>Enjoy amazing experiences <strong>for free or at a low cost</strong>.</li>
-    <li>Make your year at <strong>TSP unforgettable</strong>!</li>
-  </ul>
-
-  <p className="mt-6 text-lg text-gray-700">
-    Whether you're here for a semester or for years, our events are the perfect way  
-    to make friends, have fun, and feel at home at Télécom SudParis.
-  </p>
-
-  <p className="mt-6 text-center text-xl font-semibold text-green-600">
-    Join us & be part of the adventure!
-  </p>
-</section>
-
+  
+            </p>
+          </div>
+          <div className='min-h-screen '>
+            <Carousel>
+              {slides.map((slide, index) => (
+                <img key={index} src={slide.src} alt={slide.alt} className="object-cover" />
+              ))}
+            </Carousel>
+          </div>
+        </div>
+      </div>
     );
 };
 

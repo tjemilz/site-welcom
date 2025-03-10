@@ -1,0 +1,15 @@
+.myButton {
+    background: linear-gradient(90deg, #7aa3c9, #146ce0);
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 16px;
+    color: white;
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out
+    ; /* Ajout de la transition pour l'animation */
+}
+
+.myButton:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajout de l'ombre portée */
+    transform: translateY(-2px); /* Ajout de l'animation de translation */
+}
