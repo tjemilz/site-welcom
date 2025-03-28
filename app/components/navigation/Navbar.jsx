@@ -44,7 +44,7 @@ const Navbar = () => {
         <NavLink href="/">Welcom'</NavLink>
       </div>
       <div className="hidden md:flex space-x-8">
-        <NavLink href="/payment">Trip to XXX</NavLink>
+        <NavLink href="/payment">Trip to Bruxelles</NavLink>
         <NavLink href="/events">Our Events</NavLink>
         <NavLink href="/welcoming">Welcome to Evry</NavLink>
       </div>
@@ -57,7 +57,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden flex flex-col mt-4 space-y-2 bg-gray-100 p-4 absolute top-16 left-0 right-0 z-50">
           <NavLink href="/payment" onClick={() => setIsOpen(false)}>
-            Trip to XXX
+            Trip to Bruxelles
           </NavLink>
           <NavLink href="/events" onClick={() => setIsOpen(false)}>
             Our Events
