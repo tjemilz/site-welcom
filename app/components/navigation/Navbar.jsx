@@ -47,6 +47,7 @@ const Navbar = () => {
         <NavLink href="/payment">Trip to Bruxelles</NavLink>
         <NavLink href="/events">Our Events</NavLink>
         <NavLink href="/welcoming">Welcome to Evry</NavLink>
+        <NavLink href="/partenaires">Nos partenaires</NavLink>
       </div>
       <div className="md:hidden">
         <button onClick={() => setIsOpen(!isOpen)} className="text-gray-800">
@@ -64,6 +65,9 @@ const Navbar = () => {
           </NavLink>
           <NavLink href="/welcoming" onClick={() => setIsOpen(false)}>
             Welcome to Evry
+          </NavLink>
+          <NavLink href="/partenaires" onClick={() => setIsOpen(false)}>
+            Nos partenaires
           </NavLink>
         </div>
       )}

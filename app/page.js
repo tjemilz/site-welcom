@@ -58,7 +58,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center md:justify-end">
             <Image 
-              src="/orga_welcom.jpeg"
+              src="/orga.png"
               alt="Welcom Logo"
               width={1000}
               height={1000}

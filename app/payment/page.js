@@ -1,9 +1,8 @@
 import React from 'react';
-import Countdown from '../components/Countdown'; // Assurez-vous que le chemin est correct
-import SablierAnime from './Sablier';
+
 
 const PaymentPage = () => {
-    const targetDate = '2025-03-19T00:00:00'; // Date cible pour le compte à rebours
+   
 
     return (
         <div className="flex flex-col pt-8">
